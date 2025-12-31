@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Verification</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        .header-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #1a365d;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .verified-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .verified-box {
+            background-color: #e8f4fc;
+            border: 1px solid #b8d4e8;
+            border-radius: 8px;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        .verified-text {
+            color: #5ba4d4;
+            font-size: 16px;
+            line-height: 1.3;
+        }
+
+        .verified-icon {
+            width: 32px;
+            height: 32px;
+            margin-top: 5px;
+        }
+
+        .download-btn {
+            background-color: #6ba5d7;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .download-btn:hover {
+            background-color: #5a94c6;
+        }
+
+        .certificate-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 25px;
+            position: relative;
+        }
+
+        .card-content {
+            position: relative;
+        }
+
+        .person-photo {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 90px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .qr-code {
+            position: absolute;
+            right: 0;
+            top: 155px;
+            width: 100px;
+            height: 100px;
+        }
+
+        .info-row {
+            margin-bottom: 12px;
+            max-width: calc(100% - 110px);
+        }
+
+        .info-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .label {
+            color: #2c5282;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .value {
+            color: #4a5568;
+            font-size: 18px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header-title">EASTERN UNITED TRAINING CENTER</h1>
+        
+        <div class="verified-badge">
+            <div class="verified-box">
+                <div class="verified-text">Certificate<br>Is Verified</div>
+                <svg class="verified-icon" viewBox="0 0 24 24" fill="#5ba4d4">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                    <path d="M12 1L9.5 4.5 5 3.5l1 4.5L2.5 12l3.5 3.5-1 4.5 4.5-1L12 23l2.5-3.5 4.5 1-1-4.5L21.5 12 18 8.5l1-4.5-4.5 1L12 1z" fill="#5ba4d4"/>
+                    <path d="M10 14.5l-2.5-2.5-1.5 1.5 4 4 7-7-1.5-1.5z" fill="white"/>
+                </svg>
+            </div>
+        </div>
+
+        <button class="download-btn">Download QR Code</button>
+
+        <div class="certificate-card">
+            <div class="card-content">
+                <img src="image.jpg" alt="Person Photo" class="person-photo">
+                
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=EUTC-HSE-2025-19370" alt="QR Code" class="qr-code">
+
+                <div class="info-row">
+                    <span class="label">Certificate No:</span>
+                    <span class="value">EUTC-HSE-2025-19370</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="label">Name:</span>
+                    <span class="value">RIZWAN ULLAH BAZID KHAN</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="label">Company Name:</span>
+                    <span class="value">INDIVIUAL</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="label">ID No:</span>
+                    <span class="value">2609345927</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="label">Course Name:</span>
+                    <span class="value">FLAG MAN TRAINING</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="label">Issue Date:</span>
+                    <span class="value">04-December-2025</span>
+                </div>
+
+                <div class="info-row">
+                    <span class="label">Expiry Date:</span>
+                    <span class="value">03-December-2027</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
